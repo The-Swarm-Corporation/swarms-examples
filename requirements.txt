@@ -1,3 +1,8 @@
-torch
-zetascale
 swarms
+swarm-models
+swarms-memory
+pydantic
+loguru
+python-dotenv
+clusterops
+griptape
