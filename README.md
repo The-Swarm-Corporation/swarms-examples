@@ -3,7 +3,7 @@
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20our%20server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/agora-999382051935506503) [![Subscribe on YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@kyegomez3242) [![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kye-g-38759a207/) [![Follow on X.com](https://img.shields.io/badge/X.com-Follow-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/kyegomezb)
 
 
-The Swarms Framework is a production-grade framework designed for building and deploying multi-agent systems. It provides robust tools and libraries to facilitate the development of complex, distributed, and scalable agent-based applications.
+The Swarms Framework is a production-grade framework designed for building and deploying multi-agent systems. It provides robust tools and libraries to facilitate the development of complex, distributed, and scalable llm-agent-based applications.
 
 ## Features
 
@@ -16,8 +16,10 @@ The Swarms Framework is a production-grade framework designed for building and d
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- [Docker](https://www.docker.com/) (optional, for containerized deployments)
+```bash
+$ pip3 install -U swarms swarm-models swarms-memory
+
+```
 
 ### Installation
 
