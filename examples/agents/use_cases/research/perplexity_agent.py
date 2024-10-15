@@ -6,7 +6,7 @@ $ pip install swarms
 - use better prompts [System and SOPs]
 - Use a open source model like Command R
 - Better SOPS ++ System Prompts
-- 
+-
 """
 
 from swarms import Agent

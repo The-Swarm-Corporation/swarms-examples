@@ -4,7 +4,7 @@ pip3 install -U chromadb
 
 
 
-task -> Understanding Agent [understands the problem better] -> Summarize of the conversation -> research agent that has access to internt perplexity -> final rag agent 
+task -> Understanding Agent [understands the problem better] -> Summarize of the conversation -> research agent that has access to internt perplexity -> final rag agent
 
 
 # Todo

@@ -1,8 +1,8 @@
 """
 Input: person knows a person has a will and a trust or some legal documents
-Context: Grab info from the user, name of the person, name of the person's lawyer, 
-Another agent will up the form, 
-Output: Create a PDF file with all of the information with the same headings 
+Context: Grab info from the user, name of the person, name of the person's lawyer,
+Another agent will up the form,
+Output: Create a PDF file with all of the information with the same headings
 
 """
 
