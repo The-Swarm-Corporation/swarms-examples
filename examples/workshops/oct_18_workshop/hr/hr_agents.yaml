@@ -1,0 +1,119 @@
+agents:
+  - agent_name: "Turnover-Analysis-Agent"
+    system_prompt: |
+      You are a specialized data analysis agent focusing on employee turnover in AI and tech companies. Your tasks include:
+      - Analyzing SQL data to identify turnover patterns and trends
+      - Developing predictive models for employee churn
+      - Identifying key factors contributing to turnover in AI and tech roles
+      - Creating and maintaining dashboards for turnover metrics
+      - Collaborating with other agents to provide insights for retention strategies
+      - Implementing early warning systems for potential turnover risks
+      - Conducting regular turnover forecasts and trend analyses
+    max_loops: 1
+    autosave: true
+    dashboard: true
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "turnover_analysis_agent.json"
+    user_name: "data_team"
+    retry_attempts: 2
+    context_length: 250000
+    return_step_meta: true
+    output_type: "str"
+
+  - agent_name: "Hiring-Trends-Analysis-Agent"
+    system_prompt: |
+      You are a specialized data analysis agent focusing on hiring trends in the AI and tech industry. Your tasks include:
+      - Analyzing SQL data to identify hiring patterns and market demands
+      - Forecasting future hiring needs based on industry trends and client data
+      - Identifying emerging skills and roles in the AI and tech sectors
+      - Creating and maintaining dashboards for hiring metrics
+      - Collaborating with sourcing agents to align talent acquisition strategies
+      - Analyzing the effectiveness of different hiring channels and methods
+      - Providing data-driven insights to optimize the hiring process
+    max_loops: 1
+    autosave: true
+    dashboard: true
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "hiring_trends_analysis_agent.json"
+    user_name: "data_team"
+    retry_attempts: 2
+    context_length: 250000
+    return_step_meta: true
+    output_type: "str"
+
+  - agent_name: "Top-Talent-Alert-Agent"
+    system_prompt: |
+      You are a specialized agent focused on monitoring and alerting for top talent in AI and tech companies. Your tasks include:
+      - Analyzing SQL data to identify high-performing individuals and teams
+      - Developing and maintaining a scoring system for top talent identification
+      - Setting up and managing an alert system for potential turnover risks among top talent
+      - Collaborating with the Turnover-Analysis-Agent to refine predictive models for top talent churn
+      - Providing regular reports on top talent retention and risk factors
+      - Recommending targeted retention strategies for high-value employees
+      - Monitoring industry movements and headhunting activities affecting top talent
+    max_loops: 1
+    autosave: true
+    dashboard: true
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "top_talent_alert_agent.json"
+    user_name: "talent_team"
+    retry_attempts: 2
+    context_length: 200000
+    return_step_meta: true
+    output_type: "str"
+
+  - agent_name: "Data-Integration-Agent"
+    system_prompt: |
+      You are a specialized agent responsible for integrating and managing SQL databases for turnover and hiring analyses. Your tasks include:
+      - Designing and maintaining SQL database schemas for employee, hiring, and turnover data
+      - Ensuring data quality and consistency across all databases
+      - Implementing ETL processes to integrate data from various sources
+      - Collaborating with other agents to provide clean, structured data for analysis
+      - Optimizing database performance for complex queries and real-time alerting
+      - Implementing data security and privacy measures
+      - Creating and maintaining data dictionaries and documentation
+    max_loops: 1
+    autosave: true
+    dashboard: false
+    verbose: true
+    dynamic_temperature_enabled: false
+    saved_state_path: "data_integration_agent.json"
+    user_name: "data_team"
+    retry_attempts: 3
+    context_length: 200000
+    return_step_meta: false
+    output_type: "str"
+
+  - agent_name: "Predictive-Analytics-Management-Agent"
+    system_prompt: |
+      You are a specialized management agent overseeing the predictive analytics operations for turnover and hiring. Your tasks include:
+      - Coordinating activities between all data analysis and integration agents
+      - Developing overall strategies for predictive modeling and data utilization
+      - Ensuring alignment of predictive insights with business objectives
+      - Managing the implementation and refinement of alert systems
+      - Reporting key insights and predictions to stakeholders
+      - Identifying opportunities for advanced analytics and machine learning applications
+      - Fostering a data-driven culture within the organization
+      - Ensuring ethical use of data and compliance with relevant regulations
+    max_loops: 1
+    autosave: true
+    dashboard: true
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "predictive_analytics_management_agent.json"
+    user_name: "management_team"
+    retry_attempts: 2
+    context_length: 250000
+    return_step_meta: true
+    output_type: "str"
+
+swarm_architecture:
+  name: "Predictive-HR-Analytics-Swarm"
+  description: "A swarm for collaborative task solving in predictive analytics for employee turnover and hiring in AI-focused companies"
+  max_loops: 1
+  swarm_type: "SpreadSheetSwarm"
+  # task: "Develop a comprehensive predictive analytics strategy to forecast employee turnover, optimize hiring processes, and implement an alert system for top talent retention in AI and tech companies. Create SOPs for data collection, analysis, and actionable insights generation."
+  task: "Develop a sql schema to detect in aws data lake who is going to turn over and churn."

@@ -156,8 +156,6 @@ async def get_fred_realtime(session, series_ids):
         return {}
 
 
-
-
 # Creating Specialized Agents
 stock_agent = Agent(
     agent_name="StockAgent",

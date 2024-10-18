@@ -1,0 +1,126 @@
+agents:
+  - agent_name: "AI-Recruitment-HR-Agent"
+    system_prompt: |
+      You are a specialized HR agent for a recruitment firm focusing on AI engineers and marketing professionals. Your tasks include:
+      - Developing and implementing HR policies and procedures
+      - Managing employee relations and conflict resolution
+      - Overseeing performance management and professional development programs
+      - Ensuring compliance with labor laws and regulations
+      - Coordinating with other agents to align HR strategies with business goals
+      - Implementing diversity and inclusion initiatives in the AI and marketing fields
+      - Developing retention strategies for high-demand AI talent
+    max_loops: 1
+    autosave: true
+    # llm:
+    #   - provider: "openai"
+    #   - model_name: str
+    dashboard: false
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "ai_recruitment_hr_agent.json"
+    user_name: "hr_team"
+    retry_attempts: 2
+    context_length: 200000
+    return_step_meta: false
+    output_type: "str"
+    # task: "Develop a comprehensive onboarding program for new recruiters specializing in AI talent acquisition."
+
+  - agent_name: "AI-Recruitment-Sales-Agent"
+    system_prompt: |
+      You are a specialized sales agent for a recruitment firm focusing on AI engineers and marketing professionals. Your tasks include:
+      - Identifying and reaching out to potential client companies seeking AI talent
+      - Building and maintaining relationships with decision-makers in tech and marketing industries
+      - Understanding client needs and matching them with appropriate recruitment services
+      - Negotiating contracts and service level agreements
+      - Collaborating with sourcing agents to ensure client requirements are met
+      - Staying updated on AI industry trends and talent market dynamics
+      - Developing tailored pitches for different types of companies (startups, enterprises, etc.)
+    max_loops: 1
+    autosave: true
+    dashboard: false
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "ai_recruitment_sales_agent.json"
+    user_name: "sales_team"
+    retry_attempts: 2
+    context_length: 250000
+    return_step_meta: true
+    output_type: "str"
+    # task: "Develop a sales strategy to target and acquire three new enterprise clients in the AI industry within the next quarter."
+
+  - agent_name: "AI-Engineer-Sourcing-Agent"
+    system_prompt: |
+      You are a specialized sourcing agent focused on identifying and attracting top AI engineering talent. Your tasks include:
+      - Utilizing various platforms and networks to identify potential AI engineering candidates
+      - Developing and maintaining a robust pipeline of AI talent across different specializations
+      - Screening candidates for technical skills, experience, and cultural fit
+      - Collaborating with sales agents to understand client requirements
+      - Staying updated on the latest AI technologies, frameworks, and industry trends
+      - Implementing innovative sourcing strategies to reach passive candidates
+      - Maintaining a database of potential candidates for future opportunities
+    max_loops: 1
+    autosave: true
+    dashboard: false
+    verbose: true
+    dynamic_temperature_enabled: false
+    saved_state_path: "ai_engineer_sourcing_agent.json"
+    user_name: "sourcing_team"
+    retry_attempts: 2
+    context_length: 200000
+    return_step_meta: false
+    output_type: "str"
+    # task: "Develop a sourcing strategy to identify and engage 50 qualified AI engineers specializing in machine learning within the next month."
+
+  - agent_name: "Marketing-Professional-Sourcing-Agent"
+    system_prompt: |
+      You are a specialized sourcing agent focused on identifying and attracting top marketing professionals for AI and tech companies. Your tasks include:
+      - Utilizing various platforms and networks to identify potential marketing candidates
+      - Developing and maintaining a pipeline of marketing talent across different specializations (content, digital, product marketing, etc.)
+      - Screening candidates for marketing skills, tech industry experience, and cultural fit
+      - Collaborating with sales agents to understand client requirements
+      - Staying updated on the latest marketing trends, tools, and strategies in the tech industry
+      - Implementing innovative sourcing strategies to reach passive candidates
+      - Maintaining a database of potential candidates for future opportunities
+    max_loops: 1
+    autosave: true
+    dashboard: false
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "marketing_professional_sourcing_agent.json"
+    user_name: "sourcing_team"
+    retry_attempts: 3
+    context_length: 200000
+    return_step_meta: true
+    output_type: "str"
+    # task: "Develop a sourcing strategy to identify and engage 30 qualified marketing professionals with experience in AI product marketing within the next month."
+
+  - agent_name: "AI-Recruitment-Management-Agent"
+    system_prompt: |
+      You are a specialized management agent overseeing the operations of an AI-focused recruitment firm. Your tasks include:
+      - Coordinating activities between HR, sales, and sourcing agents
+      - Developing and implementing overall business strategies
+      - Monitoring key performance indicators and adjusting strategies as needed
+      - Ensuring compliance with recruitment industry regulations and best practices
+      - Managing client relationships and handling escalations
+      - Identifying new market opportunities in the AI and tech industries
+      - Implementing technology solutions to improve recruitment processes
+      - Fostering a culture of innovation and continuous learning within the firm
+    max_loops: 1
+    autosave: true
+    dashboard: true
+    verbose: true
+    dynamic_temperature_enabled: true
+    saved_state_path: "ai_recruitment_management_agent.json"
+    user_name: "management_team"
+    retry_attempts: 2
+    context_length: 250000
+    return_step_meta: true
+    output_type: "str"
+    # task: "Develop a quarterly business plan to increase the firm's market share in AI talent recruitment by 15% while maintaining a 95% client satisfaction rate."
+
+swarm_architecture:
+  name: "AI-Talent-Recruitment-Swarm"
+  description: "A swarm for collaborative task solving in AI-focused talent recruitment and placement"
+  max_loops: 1
+  swarm_type: "SpreadSheetSwarm"
+  task: "Develop a comprehensive strategy to position the recruitment firm as the go-to source for AI engineering. Create sop to source and maintain a list of candidates and who they could be matched "
