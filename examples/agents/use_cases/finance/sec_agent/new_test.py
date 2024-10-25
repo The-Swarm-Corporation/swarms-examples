@@ -1,5 +1,4 @@
 import os
-from typing import List
 from loguru import logger
 from sec_edgar_downloader import Downloader
 

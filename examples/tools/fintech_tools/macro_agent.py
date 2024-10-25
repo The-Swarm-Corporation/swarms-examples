@@ -158,7 +158,7 @@ def fetch_exchange_rates() -> Dict[str, Any]:
 
 
 def fetch_world_bank_data(
-    indicator: Tuple[str, str]
+    indicator: Tuple[str, str],
 ) -> Dict[str, Any]:
     indicator_name, indicator_code = indicator
     wb_url = f"http://api.worldbank.org/v2/indicator/{indicator_code}?date=2021:2022&format=json"
