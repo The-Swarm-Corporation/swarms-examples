@@ -4,6 +4,7 @@ import subprocess
 
 # Model
 llm = Anthropic(
+    model_name="claude-3-5-sonnet-20240620",
     temperature=0.1,
 )
 
