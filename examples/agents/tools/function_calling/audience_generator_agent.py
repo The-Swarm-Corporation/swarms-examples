@@ -3,7 +3,6 @@ from swarm_models.openai_function_caller import OpenAIFunctionCaller
 from pydantic import BaseModel, Field
 from typing import List
 
-
 system_prompt = """
 
 

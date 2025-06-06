@@ -54,17 +54,26 @@ llm = OpenAIChat(
 
 # Product Manager Agent init
 product_manager_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=CODE_INTERPRETER, autosave=True
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=CODE_INTERPRETER,
+    autosave=True,
 )
 
 # Initialize the agent with the language agent
 feature_implementer_frontend = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=CODE_INTERPRETER, autosave=True
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=CODE_INTERPRETER,
+    autosave=True,
 )
 
 # Create another agent for a different task
 feature_implementer_backend = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=CODE_INTERPRETER, autosave=True
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=CODE_INTERPRETER,
+    autosave=True,
 )
 
 # Create another agent for a different task
@@ -74,7 +83,10 @@ tester_agent = Agent(
 
 # Create another agent for a different task
 documenting_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=DOCUMENTATION_SOP, autosave=True
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=DOCUMENTATION_SOP,
+    autosave=True,
 )
 
 

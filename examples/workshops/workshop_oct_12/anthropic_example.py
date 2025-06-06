@@ -2,7 +2,6 @@ import os
 from swarm_models import Anthropic
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 

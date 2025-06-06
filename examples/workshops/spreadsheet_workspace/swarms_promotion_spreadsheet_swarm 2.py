@@ -3,7 +3,6 @@ from swarms import Agent
 from swarm_models import OpenAIChat
 from swarms.structs.spreadsheet_swarm import SpreadSheetSwarm
 
-
 SWARMS_LINK = "https://github.com/kyegomez/swarms"
 
 # Define custom system prompts for each social media platform

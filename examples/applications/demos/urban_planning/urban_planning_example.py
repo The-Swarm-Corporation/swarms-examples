@@ -21,13 +21,19 @@ vision_api = GPT4VisionAPI(api_key=api_key)
 
 # Initialize agents for urban planning tasks
 architecture_analysis_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=upp.ARCHITECTURE_ANALYSIS_PROMPT
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=upp.ARCHITECTURE_ANALYSIS_PROMPT,
 )
 infrastructure_evaluation_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=upp.INFRASTRUCTURE_EVALUATION_PROMPT
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=upp.INFRASTRUCTURE_EVALUATION_PROMPT,
 )
 traffic_flow_analysis_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=upp.TRAFFIC_FLOW_ANALYSIS_PROMPT
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=upp.TRAFFIC_FLOW_ANALYSIS_PROMPT,
 )
 environmental_impact_assessment_agent = Agent(
     model_name="gpt-4o-mini",
@@ -35,15 +41,21 @@ environmental_impact_assessment_agent = Agent(
     sop=upp.ENVIRONMENTAL_IMPACT_ASSESSMENT_PROMPT,
 )
 public_space_utilization_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=upp.PUBLIC_SPACE_UTILIZATION_PROMPT
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=upp.PUBLIC_SPACE_UTILIZATION_PROMPT,
 )
 socioeconomic_impact_analysis_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=upp.SOCIOECONOMIC_IMPACT_ANALYSIS_PROMPT
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=upp.SOCIOECONOMIC_IMPACT_ANALYSIS_PROMPT,
 )
 
 # Initialize the final planning agent
 final_plan_agent = Agent(
-    model_name="gpt-4o-mini", max_loops=1, sop=upp.FINAL_URBAN_IMPROVEMENT_PLAN_PROMPT
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    sop=upp.FINAL_URBAN_IMPROVEMENT_PLAN_PROMPT,
 )
 
 # Create Sequential Workflow

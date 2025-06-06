@@ -38,11 +38,15 @@ image_prompt = edu_prompts.IMAGE_GENERATION_PROMPT.format(
 )
 
 # Initialize agents for different educational tasks
-curriculum_agent = Agent(model_name="gpt-4o-mini", max_loops=1, sop=curriculum_prompt)
+curriculum_agent = Agent(
+    model_name="gpt-4o-mini", max_loops=1, sop=curriculum_prompt
+)
 interactive_learning_agent = Agent(
     model_name="gpt-4o-mini", max_loops=1, sop=interactive_prompt
 )
-sample_lesson_agent = Agent(model_name="gpt-4o-mini", max_loops=1, sop=sample_prompt)
+sample_lesson_agent = Agent(
+    model_name="gpt-4o-mini", max_loops=1, sop=sample_prompt
+)
 
 # Create Sequential Workflow
 workflow = SequentialWorkflow(max_loops=1)

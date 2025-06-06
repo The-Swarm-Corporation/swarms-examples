@@ -10,7 +10,6 @@ from swarms import (
     Agent,
     SpreadSheetSwarm,
 )
-from swarm_models import OpenAIChat
 from swarm_models.openai_function_caller import OpenAIFunctionCaller
 
 agent_pool = []
@@ -143,12 +142,6 @@ def create_agents(
     system_prompt: str,
     # task: str,
 ):
-    # Create an instance of the OpenAIChat class
-    llm_worker = OpenAIChat(
-        api_key=os.getenv("OPENAI_API_KEY"),
-        model_name="gpt-4o-mini",
-        temperature=0.1,
-    )
 
     agent_created = Agent(
         agent_name=agent_name,

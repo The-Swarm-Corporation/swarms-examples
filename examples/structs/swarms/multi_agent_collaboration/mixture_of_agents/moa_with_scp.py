@@ -3,7 +3,6 @@ from swarm_models import OpenAIChat
 from swarms.structs.mixture_of_agents import MixtureOfAgents
 from swarms_memory import ChromaDB
 
-
 SEC_DATA = """
 Where You Can Find More Information
 Investors and others should note that we announce material financial information to our investors using our investor relations website, press releases, SEC filings and public conference calls and webcasts. We also use the following social media channels as a means of disclosing information about the company, our products, our planned financial and other announcements and attendance at upcoming investor and industry conferences, and other matters, and for complying with our disclosure obligations under Regulation FD: 

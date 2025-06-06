@@ -20,7 +20,6 @@ from swarms import Agent, OpenAIChat, MixtureOfAgents
 import os
 import requests
 
-
 # Model
 model = OpenAIChat(max_tokens=4000, temperature=0.8)
 
@@ -158,7 +157,9 @@ def post_to_instagram(content: str) -> None:
         }
         data = {
             "caption": content,
-            "image_url": "URL_OF_THE_IMAGE_TO_POST",  # Replace with actual image URL if needed
+            "image_url": (
+                "URL_OF_THE_IMAGE_TO_POST"
+            ),  # Replace with actual image URL if needed
         }
         response = requests.post(api_url, headers=headers, json=data)
         response.raise_for_status()

@@ -5,7 +5,6 @@ from swarms.tools.prebuilt.code_executor import CodeExecutor
 from swarms.utils.loguru_logger import logger
 import threading
 
-
 code_executor = CodeExecutor()
 
 AI_EXPERT_SYSTEM_PROMPT = """

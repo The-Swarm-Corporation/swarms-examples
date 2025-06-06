@@ -16,7 +16,12 @@ agent1 = Agent(
 
 
 # Create another Agent for a different task
-agent2 = Agent("Summarizer", model_name="gpt-4o-mini", max_loops=1, dashboard=False)
+agent2 = Agent(
+    "Summarizer",
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    dashboard=False,
+)
 
 
 # Create the workflow

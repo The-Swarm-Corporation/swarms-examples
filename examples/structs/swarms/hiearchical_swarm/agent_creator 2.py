@@ -144,7 +144,7 @@ def create_agents(
     # task: str,
 ):
     # Create an instance of the OpenAIChat class
-    llm_worker = OpenAIChat(
+    OpenAIChat(
         api_key=os.getenv("OPENAI_API_KEY"),
         model_name="gpt-4o-mini",
         temperature=0.1,

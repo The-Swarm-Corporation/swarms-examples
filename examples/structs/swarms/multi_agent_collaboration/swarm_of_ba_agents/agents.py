@@ -616,7 +616,9 @@ def call_with_summary(summary: str = None):
     authorization = os.getenv("BLAND_API_KEY")
     data = {
         "phone_number": "+17866955339",
-        "task": f"You're the nvidia SEC summary agent, here is a summary of growth{summary}",
+        "task": (
+            f"You're the nvidia SEC summary agent, here is a summary of growth{summary}"
+        ),
         "voice_id": 123,
     }
 

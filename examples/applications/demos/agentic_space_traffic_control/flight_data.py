@@ -45,7 +45,9 @@ def fetch_flights_in_area(
                     {
                         "callsign": flight[1].strip(),
                         "origin_country": flight[2],
-                        "last_position": f"Lat: {flight[5]}, Lon: {flight[6]}",
+                        "last_position": (
+                            f"Lat: {flight[5]}, Lon: {flight[6]}"
+                        ),
                         "altitude_meters": flight[7],
                     }
                 )

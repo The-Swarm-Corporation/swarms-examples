@@ -63,7 +63,9 @@ if __name__ == "__main__":
 
     data = generate_audio_by_prompt(
         {
-            "prompt": "A popular heavy metal song about war, sung by a deep-voiced male singer, slowly and melodiously. The lyrics depict the sorrow of people after the war.",
+            "prompt": (
+                "A popular heavy metal song about war, sung by a deep-voiced male singer, slowly and melodiously. The lyrics depict the sorrow of people after the war."
+            ),
             "make_instrumental": False,
             "wait_audio": False,
         }

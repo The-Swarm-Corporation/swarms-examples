@@ -24,7 +24,9 @@ class DebatePlayer(Agent):
             openai_api_key (str): As the parameter name suggests
             sleep_time (float): sleep because of rate limits
         """
-        super().__init__(model_name="gpt-4o-mini", agent_name=name, *args, **kwargs)
+        super().__init__(
+            model_name="gpt-4o-mini", agent_name=name, *args, **kwargs
+        )
 
 
 class Debate(BaseSwarm):

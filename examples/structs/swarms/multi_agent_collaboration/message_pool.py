@@ -1,6 +1,5 @@
 from swarms import Agent, OpenAIChat, MessagePool
 
-
 # Agents
 agent1 = Agent(
     llm=OpenAIChat(

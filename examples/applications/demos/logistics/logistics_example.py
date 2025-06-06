@@ -49,11 +49,17 @@ productivity_agent = Agent(
 )
 
 safety_agent = Agent(
-    model_name="gpt-4o-mini", sop=Safety_Agent_Prompt, max_loops=1, multi_modal=True
+    model_name="gpt-4o-mini",
+    sop=Safety_Agent_Prompt,
+    max_loops=1,
+    multi_modal=True,
 )
 
 security_agent = Agent(
-    model_name="gpt-4o-mini", sop=Security_Agent_Prompt, max_loops=1, multi_modal=True
+    model_name="gpt-4o-mini",
+    sop=Security_Agent_Prompt,
+    max_loops=1,
+    multi_modal=True,
 )
 
 sustainability_agent = Agent(

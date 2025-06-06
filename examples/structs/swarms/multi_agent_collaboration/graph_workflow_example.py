@@ -18,8 +18,18 @@ api_key = os.environ.get("OPENAI_API_KEY")
 llm = OpenAIChat(
     temperature=0.5, openai_api_key=api_key, max_tokens=4000
 )
-agent1 = Agent(model_name="gpt-4o-mini", max_loops=1, autosave=True, dashboard=True)
-agent2 = Agent(model_name="gpt-4o-mini", max_loops=1, autosave=True, dashboard=True)
+agent1 = Agent(
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    autosave=True,
+    dashboard=True,
+)
+agent2 = Agent(
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    autosave=True,
+    dashboard=True,
+)
 
 
 def sample_task():

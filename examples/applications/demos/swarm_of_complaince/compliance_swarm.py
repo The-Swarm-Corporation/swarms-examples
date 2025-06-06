@@ -13,7 +13,6 @@ from swarms import Agent
 from swarm_models.llama3_hosted import llama3Hosted
 from swarms_memory import ChromaDB
 
-
 # Model
 llm = llama3Hosted(
     temperature=0.4,

@@ -107,32 +107,40 @@ class PharmaAgent:
             try:
                 compound_info = chemical_data["PC_Compounds"][0]
                 chemical_properties = {
-                    "name": compound_info.get("props", [])[0]
-                    .get("urn", {})
-                    .get("label", "Unknown"),
-                    "molecular_weight": compound_info.get(
-                        "props", []
-                    )[1]
-                    .get("value", {})
-                    .get("fval", "Unknown"),
-                    "CAS_number": compound_info.get("props", [])[2]
-                    .get("urn", {})
-                    .get("label", "Unknown"),
-                    "formula": compound_info.get("props", [])[3]
-                    .get("value", {})
-                    .get("sval", "Unknown"),
+                    "name": (
+                        compound_info.get("props", [])[0]
+                        .get("urn", {})
+                        .get("label", "Unknown")
+                    ),
+                    "molecular_weight": (
+                        compound_info.get("props", [])[1]
+                        .get("value", {})
+                        .get("fval", "Unknown")
+                    ),
+                    "CAS_number": (
+                        compound_info.get("props", [])[2]
+                        .get("urn", {})
+                        .get("label", "Unknown")
+                    ),
+                    "formula": (
+                        compound_info.get("props", [])[3]
+                        .get("value", {})
+                        .get("sval", "Unknown")
+                    ),
                     "properties": {
-                        "melting_point": compound_info.get(
-                            "props", []
-                        )[4]
-                        .get("value", {})
-                        .get("fval", "Unknown"),
-                        "boiling_point": compound_info.get(
-                            "props", []
-                        )[5]
-                        .get("value", {})
-                        .get("fval", "Unknown"),
-                        "solubility": "miscible with water",  # Placeholder as PubChem may not provide this
+                        "melting_point": (
+                            compound_info.get("props", [])[4]
+                            .get("value", {})
+                            .get("fval", "Unknown")
+                        ),
+                        "boiling_point": (
+                            compound_info.get("props", [])[5]
+                            .get("value", {})
+                            .get("fval", "Unknown")
+                        ),
+                        "solubility": (
+                            "miscible with water"
+                        ),  # Placeholder as PubChem may not provide this
                     },
                 }
                 logger.info(
@@ -151,7 +159,9 @@ class PharmaAgent:
                 f"Failed to fetch chemical data. Status code: {response.status_code}"
             )
             return {
-                "error": f"Failed to fetch chemical data. Status code: {response.status_code}"
+                "error": (
+                    f"Failed to fetch chemical data. Status code: {response.status_code}"
+                )
             }
 
     def query_chemical_data(self, chemical_name: str) -> str:
@@ -246,34 +256,40 @@ class PharmaAgent:
                 try:
                     compound_info = chemical_data["PC_Compounds"][0]
                     chemical_properties = {
-                        "name": compound_info.get("props", [])[0]
-                        .get("urn", {})
-                        .get("label", "Unknown"),
-                        "molecular_weight": compound_info.get(
-                            "props", []
-                        )[1]
-                        .get("value", {})
-                        .get("fval", "Unknown"),
-                        "CAS_number": compound_info.get("props", [])[
-                            2
-                        ]
-                        .get("urn", {})
-                        .get("label", "Unknown"),
-                        "formula": compound_info.get("props", [])[3]
-                        .get("value", {})
-                        .get("sval", "Unknown"),
+                        "name": (
+                            compound_info.get("props", [])[0]
+                            .get("urn", {})
+                            .get("label", "Unknown")
+                        ),
+                        "molecular_weight": (
+                            compound_info.get("props", [])[1]
+                            .get("value", {})
+                            .get("fval", "Unknown")
+                        ),
+                        "CAS_number": (
+                            compound_info.get("props", [])[2]
+                            .get("urn", {})
+                            .get("label", "Unknown")
+                        ),
+                        "formula": (
+                            compound_info.get("props", [])[3]
+                            .get("value", {})
+                            .get("sval", "Unknown")
+                        ),
                         "properties": {
-                            "melting_point": compound_info.get(
-                                "props", []
-                            )[4]
-                            .get("value", {})
-                            .get("fval", "Unknown"),
-                            "boiling_point": compound_info.get(
-                                "props", []
-                            )[5]
-                            .get("value", {})
-                            .get("fval", "Unknown"),
-                            "solubility": "miscible with water",  # Placeholder as PubChem may not provide this
+                            "melting_point": (
+                                compound_info.get("props", [])[4]
+                                .get("value", {})
+                                .get("fval", "Unknown")
+                            ),
+                            "boiling_point": (
+                                compound_info.get("props", [])[5]
+                                .get("value", {})
+                                .get("fval", "Unknown")
+                            ),
+                            "solubility": (
+                                "miscible with water"
+                            ),  # Placeholder as PubChem may not provide this
                         },
                     }
                     logger.info(
@@ -285,14 +301,18 @@ class PharmaAgent:
                         f"Incomplete data for chemical: {chemical_name}"
                     )
                     return {
-                        "error": "Chemical data not found or incomplete"
+                        "error": (
+                            "Chemical data not found or incomplete"
+                        )
                     }
             else:
                 logger.error(
                     f"Failed to fetch chemical data. Status code: {response.status}"
                 )
                 return {
-                    "error": f"Failed to fetch chemical data. Status code: {response.status}"
+                    "error": (
+                        f"Failed to fetch chemical data. Status code: {response.status}"
+                    )
                 }
 
     async def run_async(self, chemical_name: str) -> str:

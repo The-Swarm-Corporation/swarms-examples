@@ -2,7 +2,6 @@ from swarms.structs.agent_registry import AgentRegistry
 from swarms import Agent
 from swarm_models import Anthropic
 
-
 # Initialize the agents
 growth_agent1 = Agent(
     agent_name="Marketing Specialist",

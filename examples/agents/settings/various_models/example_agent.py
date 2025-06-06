@@ -29,7 +29,12 @@ print(
 )
 
 ## Initialize the workflow
-agent = Agent(model_name="gpt-4o-mini", max_loops=1, autosave=True, dashboard=True)
+agent = Agent(
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    autosave=True,
+    dashboard=True,
+)
 
 # Run the workflow on a task
 out = agent.run("Generate a 10,000 word blog on health and wellness.")

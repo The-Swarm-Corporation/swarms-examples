@@ -17,13 +17,19 @@ role_identification_agent = Agent(
     max_loops=1,
 )
 agent_configuration_agent = Agent(
-    model_name="gpt-4o-mini", sop=sdsp.AGENT_CONFIGURATION_AGENT_PROMPT, max_loops=1
+    model_name="gpt-4o-mini",
+    sop=sdsp.AGENT_CONFIGURATION_AGENT_PROMPT,
+    max_loops=1,
 )
 swarm_assembly_agent = Agent(
-    model_name="gpt-4o-mini", sop=sdsp.SWARM_ASSEMBLY_AGENT_PROMPT, max_loops=1
+    model_name="gpt-4o-mini",
+    sop=sdsp.SWARM_ASSEMBLY_AGENT_PROMPT,
+    max_loops=1,
 )
 testing_optimization_agent = Agent(
-    model_name="gpt-4o-mini", sop=sdsp.TESTING_OPTIMIZATION_AGENT_PROMPT, max_loops=1
+    model_name="gpt-4o-mini",
+    sop=sdsp.TESTING_OPTIMIZATION_AGENT_PROMPT,
+    max_loops=1,
 )
 
 # Process the user idea through each agent

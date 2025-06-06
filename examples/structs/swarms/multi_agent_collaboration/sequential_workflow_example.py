@@ -19,7 +19,12 @@ task1 = Task(
 )
 
 # Create another Agent for a different task
-agent2 = Agent("Summarizer", model_name="gpt-4o-mini", max_loops=1, dashboard=False)
+agent2 = Agent(
+    "Summarizer",
+    model_name="gpt-4o-mini",
+    max_loops=1,
+    dashboard=False,
+)
 task2 = Task(
     agent=agent2,
     description="Summarize the generated blog",

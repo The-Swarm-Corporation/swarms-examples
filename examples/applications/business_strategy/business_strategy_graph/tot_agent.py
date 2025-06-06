@@ -1,4 +1,3 @@
-
 import os
 
 import mermaid as md
@@ -105,21 +104,22 @@ agent = Agent(
 )
 
 
-
-def tree_of_thoughts_agent(agent: Agent, task: str, prev_graph: str = None):
+def tree_of_thoughts_agent(
+    agent: Agent, task: str, prev_graph: str = None
+):
     """
     Run the Tree of Thoughts agent and build on previous graph if provided.
-    
+
     Args:
         agent (Agent): The agent to run
         task (str): The task to process
         prev_graph (str): Optional previous graph to build upon
-        
+
     Returns:
         md.Mermaid: The rendered Mermaid graph
     """
     logger.info(f"Running Tree of Thoughts agent with task: {task}")
-    
+
     if prev_graph:
         # Append new graph elements to previous graph
         logger.debug("Building on previous graph")
@@ -130,16 +130,23 @@ def tree_of_thoughts_agent(agent: Agent, task: str, prev_graph: str = None):
         logger.debug("Generating new graph")
         graph = agent.run(task)
         logger.debug(f"Generated graph: {graph}")
-    
+
     logger.info("Rendering final Mermaid graph")
     graph_code = extract_code_from_markdown(graph)
-    
-    graph = Graph('Sequence-diagram', graph_code)
-    render = md.Mermaid(graph, width=3800, height=3000) # Increase size to see all details
+
+    graph = Graph("Sequence-diagram", graph_code)
+    render = md.Mermaid(
+        graph, width=3800, height=3000
+    )  # Increase size to see all details
     render.to_png(f"business_strategy_graph_{uuid4()}.png")
-    
-    logger.info(f"Saved graph to business_strategy_graph_{uuid4()}.png")
+
+    logger.info(
+        f"Saved graph to business_strategy_graph_{uuid4()}.png"
+    )
     return render
 
 
-tree_of_thoughts_agent(agent, "How can we grow a spreadsheet swarm product for b2b applications, it's a spreadsheet of a swarm of agents that all run concurrently. How do we grow this product ")
+tree_of_thoughts_agent(
+    agent,
+    "How can we grow a spreadsheet swarm product for b2b applications, it's a spreadsheet of a swarm of agents that all run concurrently. How do we grow this product ",
+)

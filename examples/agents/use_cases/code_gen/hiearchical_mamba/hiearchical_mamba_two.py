@@ -676,7 +676,7 @@ class HierarchicalTransformer(Module):
         filter_thres=0.9,
         **kwargs,
     ):
-        b, t, device = *prompt.shape, prompt.device
+        _b, t, _device = *prompt.shape, prompt.device
 
         out = prompt
 
