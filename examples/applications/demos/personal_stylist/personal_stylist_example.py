@@ -2,7 +2,6 @@ import os
 
 from dotenv import load_dotenv
 
-from swarm_models import GPT4VisionAPI
 from swarms.prompts.personal_stylist import (
     ACCESSORIES_STYLIST_AGENT_PROMPT,
     BEARD_STYLIST_AGENT_PROMPT,
@@ -15,9 +14,6 @@ from swarms.structs import Agent
 # Load environment variables
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
-
-# Initialize GPT4VisionAPI
-llm = GPT4VisionAPI(openai_api_key=api_key)
 
 # User selfie and clothes images
 user_selfie = "user_image.jpg"

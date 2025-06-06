@@ -1,33 +1,14 @@
-import os
 
-from dotenv import load_dotenv
 
-from swarm_models import GPT4VisionAPI, OpenAIChat
 from swarms.prompts.xray_swarm_prompt import (
     TREATMENT_PLAN_PROMPT,
     XRAY_ANALYSIS_PROMPT,
 )
 from swarms.structs.agent import Agent
 
-# Load environment variables
-load_dotenv()
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
-# Function to analyze an X-ray image
-multimodal_llm = GPT4VisionAPI(
-    openai_api_key=openai_api_key,
-)
-
-# Initialize Language Model (LLM)
-llm = OpenAIChat(
-    openai_api_key=openai_api_key,
-    max_tokens=3000,
-)
-
-
 # Function to analyze an X-ray image
 analyze_xray_agent = Agent(
-    llm=multimodal_llm,
+    model_name="gpt-4o-mini",
     autosave=True,
     sop=XRAY_ANALYSIS_PROMPT,
     multi_modal=True,
@@ -36,7 +17,7 @@ analyze_xray_agent = Agent(
 
 # Treatment Plan Agent
 treatment_agent = Agent(
-    llm=multimodal_llm,
+    model_name="gpt-4o-mini",
     autosave=True,
     sop=TREATMENT_PLAN_PROMPT,
     max_loops=4,

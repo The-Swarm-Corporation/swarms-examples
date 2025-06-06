@@ -1,8 +1,5 @@
-import os
 
-from dotenv import load_dotenv
 
-from swarm_models import GPT4VisionAPI
 from swarms.prompts.logistics import (
     Efficiency_Agent_Prompt,
     Health_Security_Agent_Prompt,
@@ -13,15 +10,6 @@ from swarms.prompts.logistics import (
     Sustainability_Agent_Prompt,
 )
 from swarms.structs import Agent
-
-# from swarms.utils.banana_wrapper import banana
-
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-
-# GPT4VisionAPI or llama
-# @banana #- deploy to banana
-llm = GPT4VisionAPI(openai_api_key=api_key)
 
 # Image for analysis
 factory_image = "factory_image1.jpg"

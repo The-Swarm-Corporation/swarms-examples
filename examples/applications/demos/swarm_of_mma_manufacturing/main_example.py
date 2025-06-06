@@ -14,19 +14,10 @@ Agent:
 health security agent -> quality control agent -> productivity agent -> safety agent -> security agent -> sustainability agent -> efficiency agent
 """
 
-import os
 
-from dotenv import load_dotenv
 from termcolor import colored
 
-from swarm_models import GPT4VisionAPI
 from swarms.structs import Agent
-
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-
-# GPT4VisionAPI
-llm = GPT4VisionAPI(openai_api_key=api_key, max_tokens=2000)
 
 assembly_line = (
     "examples/demos/swarm_of_mma_manufacturing/assembly_line.jpg"

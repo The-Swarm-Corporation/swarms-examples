@@ -1,18 +1,4 @@
-import os
-from dotenv import load_dotenv
 from swarms import Agent
-
-from swarm_models import GPT4VisionAPI
-
-# Load the environment variables
-load_dotenv()
-
-
-# Initialize the language model
-llm = GPT4VisionAPI(
-    openai_api_key=os.environ.get("OPENAI_API_KEY"),
-    max_tokens=500,
-)
 
 # Initialize the task
 task = (

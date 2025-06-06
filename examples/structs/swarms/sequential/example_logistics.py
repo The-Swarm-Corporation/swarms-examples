@@ -1,7 +1,4 @@
 from swarms.structs import Agent
-import os
-from dotenv import load_dotenv
-from swarm_models import GPT4VisionAPI
 from swarms.prompts.logistics import (
     Health_Security_Agent_Prompt,
     Quality_Control_Agent_Prompt,
@@ -11,13 +8,6 @@ from swarms.prompts.logistics import (
     Sustainability_Agent_Prompt,
     Efficiency_Agent_Prompt,
 )
-
-# Load ENV
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-
-# GPT4VisionAPI
-llm = GPT4VisionAPI(openai_api_key=api_key)
 
 # Image for analysis
 factory_image = "factory_image1.jpg"

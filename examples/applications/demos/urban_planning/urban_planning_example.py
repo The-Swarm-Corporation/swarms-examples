@@ -1,23 +1,7 @@
-import os
 
-from dotenv import load_dotenv
 
 import swarms.prompts.urban_planning as upp
-from swarm_models import GPT4VisionAPI, OpenAIChat
 from swarms.structs import Agent, SequentialWorkflow
-
-# Load environment variables
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-stability_api_key = os.getenv("STABILITY_API_KEY")
-
-# Initialize language model
-llm = OpenAIChat(
-    openai_api_key=api_key, temperature=0.5, max_tokens=3000
-)
-
-# Initialize Vision model
-vision_api = GPT4VisionAPI(api_key=api_key)
 
 # Initialize agents for urban planning tasks
 architecture_analysis_agent = Agent(
