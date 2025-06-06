@@ -153,7 +153,7 @@ def create_agents(
     agent_created = Agent(
         agent_name=agent_name,
         system_prompt=system_prompt,
-        llm=llm_worker,
+        model_name="gpt-4o-mini",
         max_loops=1,
         autosave=True,
         dashboard=False,

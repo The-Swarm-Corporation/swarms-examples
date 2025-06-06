@@ -17,28 +17,28 @@ img = "bank_robbery.jpg"
 
 # Initialize agents with respective prompts for security tasks
 crowd_analysis_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=stsp.CROWD_ANALYSIS_AGENT_PROMPT,
     max_loops=1,
     multi_modal=True,
 )
 
 weapon_detection_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=stsp.WEAPON_DETECTION_AGENT_PROMPT,
     max_loops=1,
     multi_modal=True,
 )
 
 surveillance_monitoring_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=stsp.SURVEILLANCE_MONITORING_AGENT_PROMPT,
     max_loops=1,
     multi_modal=True,
 )
 
 emergency_response_coordinator = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=stsp.EMERGENCY_RESPONSE_COORDINATOR_PROMPT,
     max_loops=1,
     multi_modal=True,

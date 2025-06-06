@@ -5,7 +5,7 @@ llm = Anthropic()
 
 # Agents
 agent1 = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     system_prompt=(
         "You are the leader of the Progressive Party. What is your"
         " stance on healthcare?"
@@ -17,7 +17,7 @@ agent1 = Agent(
 )
 
 agent2 = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     agent_name="Conservative Leader",
     agent_description="Leader of the Conservative Party",
     long_term_memory=ChromaDB(),
@@ -25,7 +25,7 @@ agent2 = Agent(
 )
 
 agent3 = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     agent_name="Libertarian Leader",
     agent_description="Leader of the Libertarian Party",
     long_term_memory=ChromaDB(),

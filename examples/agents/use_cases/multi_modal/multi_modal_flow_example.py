@@ -6,7 +6,7 @@ llm = GPT4VisionAPI()
 
 agent = Agent(
     max_loops="auto",
-    llm=llm,
+    model_name="gpt-4o-mini",
 )
 
 agent.run(

@@ -19,13 +19,13 @@ llm = OpenAIChat(
 
 
 # Initialize the agent with the language agent
-agent1 = Agent(llm=llm, max_loops=1)
+agent1 = Agent(model_name="gpt-4o-mini", max_loops=1)
 
 # Create another agent for a different task
-agent2 = Agent(llm=llm, max_loops=1)
+agent2 = Agent(model_name="gpt-4o-mini", max_loops=1)
 
 # Create another agent for a different task
-agent3 = Agent(llm=llm, max_loops=1)
+agent3 = Agent(model_name="gpt-4o-mini", max_loops=1)
 
 # Create the workflow
 workflow = SequentialWorkflow(max_loops=1)

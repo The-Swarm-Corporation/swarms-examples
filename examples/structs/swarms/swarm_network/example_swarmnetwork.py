@@ -20,9 +20,9 @@ llm = OpenAIChat(
 )
 
 ## Initialize the workflow
-agent = Agent(llm=llm, max_loops=1, agent_name="Social Media Manager")
-agent2 = Agent(llm=llm, max_loops=1, agent_name=" Product Manager")
-agent3 = Agent(llm=llm, max_loops=1, agent_name="SEO Manager")
+agent = Agent(model_name="gpt-4o-mini", max_loops=1, agent_name="Social Media Manager")
+agent2 = Agent(model_name="gpt-4o-mini", max_loops=1, agent_name=" Product Manager")
+agent3 = Agent(model_name="gpt-4o-mini", max_loops=1, agent_name="SEO Manager")
 
 
 # Load the swarmnet with the agents

@@ -53,7 +53,7 @@ def make_new_file(file: str, content: str):
 
 # Initializing the agent with the Gemini instance and other parameters
 agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     agent_name="Multi-Modal RAG Agent",
     agent_description=(
         "This agent fuses together the capabilities of Gemini and"

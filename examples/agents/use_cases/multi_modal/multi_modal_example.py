@@ -26,7 +26,7 @@ img = "assembly_line.jpg"
 ## Initialize the workflow
 agent = Agent(
     agent_name="Multi-ModalAgent",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops="auto",
     autosave=True,
     dashboard=True,

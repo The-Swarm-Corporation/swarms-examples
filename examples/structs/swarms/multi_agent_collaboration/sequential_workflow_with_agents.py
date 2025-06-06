@@ -9,14 +9,14 @@ llm = OpenAIChat(
 # Initialize the Agent with the language agent
 agent1 = Agent(
     agent_name="John the writer",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     dashboard=False,
 )
 
 
 # Create another Agent for a different task
-agent2 = Agent("Summarizer", llm=llm, max_loops=1, dashboard=False)
+agent2 = Agent("Summarizer", model_name="gpt-4o-mini", max_loops=1, dashboard=False)
 
 
 # Create the workflow

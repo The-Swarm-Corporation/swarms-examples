@@ -36,7 +36,7 @@ agent = Agent(
     long_term_memory=memory,
 )
 agent2 = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     agent_name=" Product Manager",
     long_term_memory=memory,

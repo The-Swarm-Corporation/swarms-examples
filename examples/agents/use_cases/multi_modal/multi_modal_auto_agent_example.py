@@ -23,7 +23,7 @@ img = "images/swarms.jpeg"
 
 ## Initialize the workflow
 agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops="auto",
     autosave=True,
     dashboard=True,

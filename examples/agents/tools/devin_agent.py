@@ -84,7 +84,7 @@ agent = Agent(
         " agents. Be Helpful and Kind. Use the tools provided to"
         " assist the user. Return all code in markdown format."
     ),
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops="auto",
     autosave=True,
     dashboard=False,

@@ -24,7 +24,7 @@ factory_image = "factory_image1.jpg"
 
 # Initialize agents with respective prompts
 health_security_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=Health_Security_Agent_Prompt,
     max_loops=1,
     multi_modal=True,
@@ -32,7 +32,7 @@ health_security_agent = Agent(
 
 # Quality control agent
 quality_control_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=Quality_Control_Agent_Prompt,
     max_loops=1,
     multi_modal=True,
@@ -41,7 +41,7 @@ quality_control_agent = Agent(
 
 # Productivity Agent
 productivity_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=Productivity_Agent_Prompt,
     max_loops=1,
     multi_modal=True,
@@ -49,18 +49,18 @@ productivity_agent = Agent(
 
 # Initiailize safety agent
 safety_agent = Agent(
-    llm=llm, sop=Safety_Agent_Prompt, max_loops=1, multi_modal=True
+    model_name="gpt-4o-mini", sop=Safety_Agent_Prompt, max_loops=1, multi_modal=True
 )
 
 # Init the security agent
 security_agent = Agent(
-    llm=llm, sop=Security_Agent_Prompt, max_loops=1, multi_modal=True
+    model_name="gpt-4o-mini", sop=Security_Agent_Prompt, max_loops=1, multi_modal=True
 )
 
 
 # Initialize sustainability agent
 sustainability_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=Sustainability_Agent_Prompt,
     max_loops=1,
     multi_modal=True,
@@ -69,7 +69,7 @@ sustainability_agent = Agent(
 
 # Initialize efficincy agent
 efficiency_agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     sop=Efficiency_Agent_Prompt,
     max_loops=1,
     multi_modal=True,

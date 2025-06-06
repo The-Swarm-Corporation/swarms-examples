@@ -16,7 +16,7 @@ llm = HuggingfaceLLM(model_id="meta-llama/Meta-Llama-3-8B").cuda()
 
 ## Initialize the workflow
 agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops="auto",
     autosave=True,
     dashboard=True,

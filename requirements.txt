@@ -6,3 +6,4 @@ loguru
 python-dotenv
 clusterops
 griptape
+rich>=13.7.0

@@ -30,7 +30,7 @@ llm = OpenAIChat(
 
 ## Initialize the workflow
 agent = Agent(
-    llm=llm,
+    model_name="gpt-4o-mini",
     name="Health and Wellness Blog",
     system_prompt="Generate a 10,000 word blog on health and wellness.",
     max_loops=4,

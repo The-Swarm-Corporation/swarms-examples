@@ -1,0 +1,16 @@
+from swarm_models.gpt4_vision_api import GPT4VisionAPI
+from swarms.structs import Agent
+
+llm = GPT4VisionAPI()
+
+task = "What is the color of the object?"
+img = "images/swarms.jpeg"
+
+## Initialize the workflow
+agent = Agent(
+    model_name="gpt-4o-mini",
+    max_loops="auto",
+    dashboard=True,
+)
+
+agent.run(task=task, img=img)

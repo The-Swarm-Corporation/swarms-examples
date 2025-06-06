@@ -18,7 +18,7 @@ async def sequential():
     agent1 = Agent(
         agent_name="Blog generator",
         system_prompt="Generate a blog post like stephen king",
-        llm=llm,
+        model_name="gpt-4o-mini",
         dashboard=False,
         streaming_on=True,
     )
@@ -26,7 +26,7 @@ async def sequential():
     agent2 = Agent(
         agent_name="Summarizer",
         system_prompt="Summarize the blog post",
-        llm=llm,
+        model_name="gpt-4o-mini",
         dashboard=False,
         streaming_on=True,
     )
@@ -52,21 +52,21 @@ async def parallel():
     writer1 = Agent(
         agent_name="Writer 1",
         system_prompt="Generate a blog post in the style of J.K. Rowling about Muhammad Ali",
-        llm=llm,
+        model_name="gpt-4o-mini",
         dashboard=False,
     )
 
     writer2 = Agent(
         agent_name="Writer 2",
         system_prompt="Generate a blog post in the style of Stephen King about Muhammad Ali",
-        llm=llm,
+        model_name="gpt-4o-mini",
         dashboard=False,
     )
 
     reviewer = Agent(
         agent_name="Reviewer",
         system_prompt="Select the writer that wrote the best story. There can only be one best story.",
-        llm=llm,
+        model_name="gpt-4o-mini",
         dashboard=False,
     )
 

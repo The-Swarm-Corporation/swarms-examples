@@ -8,7 +8,7 @@ load_dotenv()
 
 # Load environment variables
 llm = OpenAIChat(openai_api_key=os.getenv("OPENAI_API_KEY"))
-agent = Agent(llm=llm, max_loops=1)
+agent = Agent(model_name="gpt-4o-mini", max_loops=1)
 
 # Create a workflow
 workflow = RecursiveWorkflow(stop_token="<DONE>")

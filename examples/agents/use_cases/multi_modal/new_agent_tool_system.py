@@ -65,7 +65,7 @@ llm = OpenAIChat(
 ## Initialize the workflow
 agent = Agent(
     agent_name="Research Agent",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=3,
     dashboard=True,
     tools=[search_api, weather_api, rapid_api],

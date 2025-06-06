@@ -8,14 +8,14 @@ llm = llama3Hosted()
 agent1 = Agent(
     agent_name="Blog generator",
     system_prompt="Generate a blog post like stephen king",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     dashboard=False,
 )
 agent2 = Agent(
     agent_name="Summarizer",
     system_prompt="Sumamrize the blog post",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     dashboard=False,
 )

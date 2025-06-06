@@ -25,7 +25,7 @@ llm = llama3Hosted(temperature=0.2, max_tokens=3500)
 agent = Agent(
     agent_name="Research Agent",
     system_prompt=research_system_prompt,
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops="auto",
     autosave=True,
     dashboard=False,

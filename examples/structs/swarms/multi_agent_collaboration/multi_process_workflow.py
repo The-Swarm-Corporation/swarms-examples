@@ -18,28 +18,28 @@ llm = Gemini(
 # Initialize the agents
 finance_agent = Agent(
     agent_name="Finance Agent",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     system_prompt="Finance",
 )
 
 marketing_agent = Agent(
     agent_name="Marketing Agent",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     system_prompt="Marketing",
 )
 
 product_agent = Agent(
     agent_name="Product Agent",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     system_prompt="Product",
 )
 
 other_agent = Agent(
     agent_name="Other Agent",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     system_prompt="Other",
 )

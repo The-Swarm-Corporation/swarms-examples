@@ -460,7 +460,7 @@ img = "assembly_line.jpg"
 ## Initialize the workflow
 agent = Agent(
     agent_name = "Multi-ModalAgent",
-    llm=llm, 
+    model_name="gpt-4o-mini", 
     max_loops="auto", 
     autosave=True, 
     dashboard=True, 
@@ -637,7 +637,7 @@ llm = Anthropic()
 agent1 = Agent(
     agent_name="Blog generator",
     system_prompt="Generate a blog post like stephen king",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     dashboard=False,
     tools=[],
@@ -645,7 +645,7 @@ agent1 = Agent(
 agent2 = Agent(
     agent_name="summarizer",
     system_prompt="Sumamrize the blog post",
-    llm=llm,
+    model_name="gpt-4o-mini",
     max_loops=1,
     dashboard=False,
     tools=[],
@@ -759,8 +759,8 @@ api_key = os.environ.get("OPENAI_API_KEY")
 llm = OpenAIChat(
     temperature=0.5, openai_api_key=api_key, max_tokens=4000
 )
-agent1 = Agent(llm=llm, max_loops=1, autosave=True, dashboard=True)
-agent2 = Agent(llm=llm, max_loops=1, autosave=True, dashboard=True)
+agent1 = Agent(model_name="gpt-4o-mini", max_loops=1, autosave=True, dashboard=True)
+agent2 = Agent(model_name="gpt-4o-mini", max_loops=1, autosave=True, dashboard=True)
 
 def sample_task():
     print("Running sample task")
