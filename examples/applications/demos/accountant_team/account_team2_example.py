@@ -1,8 +1,3 @@
-import os
-
-from dotenv import load_dotenv
-
-from swarm_models import Anthropic, OpenAIChat
 from swarms.prompts.accountant_swarm_prompts import (
     DECISION_MAKING_PROMPT,
     DOC_ANALYZER_AGENT_PROMPT,
@@ -11,41 +6,23 @@ from swarms.prompts.accountant_swarm_prompts import (
 from swarms.structs import Agent
 from swarms.utils.pdf_to_text import pdf_to_text
 
-# Environment variables
-load_dotenv()
-anthropic_api_key = os.getenv("ANTHROPIC_API_KEY")
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
-
-# Base llms
-llm1 = OpenAIChat(
-    openai_api_key=openai_api_key,
-    max_tokens=5000,
-)
-
-llm2 = Anthropic(
-    anthropic_api_key=anthropic_api_key,
-    max_tokens=5000,
-)
-
-
 # Agents
 doc_analyzer_agent = Agent(
-    model_name="gpt-4o-mini"2,
+    model_name="gpt-4o-mini",
     sop=DOC_ANALYZER_AGENT_PROMPT,
     max_loops=1,
     autosave=True,
     saved_state_path="doc_analyzer_agent.json",
 )
 summary_generator_agent = Agent(
-    model_name="gpt-4o-mini"2,
+    model_name="gpt-4o-mini",
     sop=SUMMARY_GENERATOR_AGENT_PROMPT,
     max_loops=1,
     autosave=True,
     saved_state_path="summary_generator_agent.json",
 )
 decision_making_support_agent = Agent(
-    model_name="gpt-4o-mini"2,
+    model_name="gpt-4o-mini",
     sop=DECISION_MAKING_PROMPT,
     max_loops=1,
     saved_state_path="decision_making_support_agent.json",

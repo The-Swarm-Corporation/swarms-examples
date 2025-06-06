@@ -1,8 +1,5 @@
-import os
 
-from dotenv import load_dotenv
 
-from swarm_models import Anthropic, OpenAIChat
 from swarms.prompts.ai_research_team import (
     PAPER_IMPLEMENTOR_AGENT_PROMPT,
     PAPER_SUMMARY_ANALYZER,
@@ -11,27 +8,13 @@ from swarms.structs import Agent
 from swarms.utils.pdf_to_text import pdf_to_text
 from swarms import rearrange
 
-# Base llms
-load_dotenv()
-anthropic_api_key = os.getenv("ANTHROPIC_API_KEY")
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
 PDF_PATH = "fasterffn.pdf"
 
-
-# Base llms
-llm1 = OpenAIChat(
-    openai_api_key=openai_api_key,
-)
-
-llm2 = Anthropic(
-    anthropic_api_key=anthropic_api_key,
-)
 
 # Agents
 paper_summarizer_agent = Agent(
     agent_name="paper_summarizer_agent",
-    model_name="gpt-4o-mini"2,
+    model_name="gpt-4o-mini",
     sop=PAPER_SUMMARY_ANALYZER,
     max_loops=1,
     autosave=True,
@@ -40,7 +23,7 @@ paper_summarizer_agent = Agent(
 
 paper_implementor_agent = Agent(
     agent_name="paper_implementor_agent",
-    model_name="gpt-4o-mini"1,
+    model_name="gpt-4o-mini",
     sop=PAPER_IMPLEMENTOR_AGENT_PROMPT,
     max_loops=1,
     autosave=True,
@@ -50,7 +33,7 @@ paper_implementor_agent = Agent(
 
 pytorch_pseudocode_agent = Agent(
     agent_name="pytorch_pseudocode_agent",
-    model_name="gpt-4o-mini"1,
+    model_name="gpt-4o-mini",
     sop=PAPER_IMPLEMENTOR_AGENT_PROMPT,
     max_loops=1,
     autosave=True,
