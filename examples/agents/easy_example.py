@@ -10,4 +10,4 @@ agent = Agent(
 )
 
 # Run the workflow on a task
-agent("Find a chick fil a equivalent in hayes valley")
+agent("How can we analyze blood samples to detect diabetes?")
