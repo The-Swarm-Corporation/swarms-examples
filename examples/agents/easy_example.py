@@ -1,9 +1,7 @@
 from swarms import Agent
-from swarm_models import OpenAIChat
 
 ## Initialize the workflow
 agent = Agent(
-    llm=OpenAIChat(),
     max_loops=1,
     autosave=True,
     dashboard=False,
